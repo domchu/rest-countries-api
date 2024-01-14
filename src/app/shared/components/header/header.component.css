@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  padding: 1rem 4rem;
+  background-color: var(--color-elements);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+}
+nav h1 {
+  font-size: 1.7rem;
+}
+nav button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--items-font-size);
+  font-weight: var(--medium-font-weight);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+nav button img {
+  height: 30px;
+}
+
+@media (max-width: 835px) {
+  header {
+    padding: 0.5rem 2rem;
+  }
+}
+@media (max-width: 580px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+  h1 {
+    font-size: 1.1rem;
+  }
+}/*# sourceMappingURL=header.component.css.map */
