@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 :root {
-  --font-family: "Nunito Sans", sans-serif;
+  --font-family: "Roboto", sans-serif;
   --items-font-size: 14px;
   --details-font-size: 16px;
   --light-font-weight: 300;
@@ -22,8 +22,8 @@
 [data-theme=dark] {
   --color-text: hsl(0, 0%, 100%);
   --color-input-text: hsl(0, 0%, 100%);
-  --color-elements: hsl(209, 23%, 22%);
-  --color-bg: hsl(207, 26%, 17%);
+  --color-elements: hsl(210, 9%, 4%);
+  --color-bg: hsl(0, 0%, 8%);
   --invert: 100%;
 }
 
