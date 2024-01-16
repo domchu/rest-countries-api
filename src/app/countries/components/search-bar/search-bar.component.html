@@ -1,0 +1,15 @@
+<div class="search-container">
+    <label for="search">Search country</label>
+    <input
+      id="search"
+      type="text"
+      placeholder="Search for a country..."
+      #countrySearchInput
+      (keyup)="logSearch(countrySearchInput.value)"
+    />
+    <img
+      src="../../../../assets/search.svg"
+      alt="Search icon"
+      aria-hidden="true"
+    />
+  </div>

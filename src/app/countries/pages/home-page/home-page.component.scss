@@ -1,0 +1,48 @@
+.search-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 4rem;
+  }
+  
+  .alert-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .alert {
+    margin: 10rem auto;
+    font-size: 2rem;
+    background-color: var(--color-elements);
+    color: var(color-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: fit-content;
+    padding: 1rem 2rem;
+  }
+  
+  .card-container {
+    margin: 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 275px);
+    justify-content: center;
+    gap: 4rem;
+  }
+  
+  @media (max-width: 835px) {
+    .search-row {
+      flex-direction: column;
+      align-items: start;
+      gap: 2rem;
+    }
+  
+    countries-search-bar {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .search-row {
+      margin: 2rem 1rem;
+    }
+  }
