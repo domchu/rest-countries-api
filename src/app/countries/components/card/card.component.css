@@ -2,8 +2,7 @@
   box-shadow: var(--shadow);
   cursor: pointer;
 }
-
-img {
+.card-container img {
   width: 275px;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
@@ -12,25 +11,21 @@ img {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-
-.country-info {
+.card-container .country-info {
   padding: 1.25rem 1.5rem 2.5rem;
   background-color: var(--color-elements);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
-
-.country-name {
+.card-container .country-info .country-name {
   margin-block: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: var(--bold-font-weight);
 }
-
-.country-data-point {
+.card-container .country-info .country-data-point {
   font-size: var(--items-font-size);
   margin-block: 0.25rem;
 }
-
-.country-accented {
+.card-container .country-info .country-accented {
   font-weight: var(--medium-font-weight);
 }/*# sourceMappingURL=card.component.css.map */
