@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  OnDestroy,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 
 import { Region } from '../../interfaces/region.type';
 import { Subscription } from 'rxjs/internal/Subscription';
@@ -15,21 +9,14 @@ import { CountriesService } from '../../services/countries.service';
 @Component({
   selector: 'countries-region-select',
   templateUrl: './region-select.component.html',
-  styleUrls: ['./region-select.component.css'],
+  styleUrls: ['./region-select.component.css']
 })
 export class RegionSelectComponent implements OnInit, OnDestroy {
   private debouncer = new Subject<string>();
   private debounceSubscription = new Subscription();
 
   @Output() changeRegion = new EventEmitter();
-  regions: Region[] = [
-    'all',
-    'africa',
-    'americas',
-    'asia',
-    'europe',
-    'oceania',
-  ];
+  regions: Region[] = ["all", "africa", "americas", "asia", "europe", "oceania"];
   selectedRegion!: Region;
 
   expanded: boolean = false;
@@ -38,11 +25,12 @@ export class RegionSelectComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.selectedRegion = this.countriesService.countriesStore.selectedRegion;
-    this.debounceSubscription = this.debouncer
-      .pipe(debounceTime(200))
-      .subscribe((value) => {
+    this.debounceSubscription = this.debouncer.pipe(
+      debounceTime(200)
+    )
+      .subscribe(value => {
         this.changeRegion.emit(value);
-      });
+      })
   }
 
   ngOnDestroy(): void {
@@ -59,7 +47,8 @@ export class RegionSelectComponent implements OnInit, OnDestroy {
       this.countriesService.changeRegionFilter(region);
       this.debouncer.next(region);
     } else {
-      return;
+      return
     }
   }
+
 }

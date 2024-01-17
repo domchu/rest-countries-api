@@ -4,13 +4,13 @@ import { HomePageComponent } from './countries/pages/home-page/home-page.compone
 import { CountryPageComponent } from './countries/pages/country-page/country-page.component';
 
 const routes: Routes = [
-  {path: "", component: HomePageComponent},
-  {path: "countries/:code", component: CountryPageComponent},
-  {path: "**", redirectTo: ""}
+  { path: '', component: HomePageComponent },
+  { path: 'countries/:code', component: CountryPageComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

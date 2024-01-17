@@ -1,24 +1,19 @@
-import {
-  Directive,
-  ElementRef,
-  EventEmitter,
-  HostListener,
-  Output,
-} from '@angular/core';
+import { Directive, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[hideDropdown]',
+  selector: '[hideDropdown]'
 })
 export class HideDropdownDirective {
-  constructor(private elRef: ElementRef) {}
+
+  constructor(private elRef: ElementRef) { }
 
   @Output() hideDropdown = new EventEmitter<MouseEvent>();
 
-  @HostListener('document:click', ['$event', '$event.target'])
+  @HostListener("document:click", ["$event", "$event.target"])
   onClick(event: MouseEvent, target: HTMLElement) {
-    const isToggleButton = target.id === 'dropdown-toggle';
-    const isInsideToggle =
-      target.parentElement && target.parentElement.id === 'dropdown-toggle';
+
+   const isToggleButton = target.id === "dropdown-toggle";
+   const isInsideToggle = target.parentElement && target.parentElement.id === "dropdown-toggle"
 
     if (!target || isToggleButton || isInsideToggle) return;
 

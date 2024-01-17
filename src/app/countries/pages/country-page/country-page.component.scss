@@ -2,30 +2,27 @@
     margin: 4rem;
     display: flex;
     flex-direction: column;
-
-    .alert {
-      align-self: center;
-      font-size: 2rem;
-      background-color: var(--color-elements);
-      color: var(color-text);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      max-width: fit-content;
-      padding: 1rem 2rem;
-    }
-    .country-container {
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      max-width: 1500px;
-    }
   }
   
+  .alert {
+    align-self: center;
+    font-size: 2rem;
+    background-color: var(--color-elements);
+    color: var(color-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: fit-content;
+    padding: 1rem 2rem;
+  }
   
-  
-  
+  .country-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1500px;
+  }
   
   .country-container img {
     max-width: 525px;

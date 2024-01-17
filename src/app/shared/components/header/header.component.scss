@@ -1,41 +1,33 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing:border-box;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-nav {
+header {
   width: 100%;
-  padding: 1.5rem 4rem;
+  padding: .5rem 4rem;
   background-color: var(--color-elements);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 0px 5px rgb(0 0 0 / 20%);
-
-  h1 {
-    font-size: 1.7rem;
-  }
-  button {
-    background-color: transparent;
-    border: none;
-    color: var(--color-text);
-    font-family: "Roboto", sans-serif;
-    font-size: var(--items-font-size);
-    font-weight: var(--medium-font-weight);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  
-    img {
-      height: 30px;
-    }
-  }
 }
 
-// RESPONSIVENESS
+h1 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: var(--items-font-size);
+  font-weight: var(--medium-font-weight);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 30px;
+}
+
 @media (max-width: 835px) {
   header {
     padding: .5rem 2rem;

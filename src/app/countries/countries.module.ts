@@ -7,7 +7,9 @@ import { RegionSelectComponent } from './components/region-select/region-select.
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardComponent } from './components/card/card.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
-// import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
+
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,10 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
     CardComponent,
     CountryPageComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SharedModule
+  ]
 })
-export class CountriesModule {}
+export class CountriesModule { }

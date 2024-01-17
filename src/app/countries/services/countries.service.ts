@@ -6,27 +6,28 @@ import { CountriesStore } from '../interfaces/countriesStore.interface';
 import { Region } from '../interfaces/region.type';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CountriesService {
-  private apiUrl: string = 'https://restcountries.com/v3.1/';
+
+  private apiUrl: string = "https://restcountries.com/v3.1/";
 
   countriesStore: CountriesStore = {
     countries: [],
-    query: '',
-    selectedRegion: 'all',
-  };
+    query: "",
+    selectedRegion: "all"
+  }
 
   constructor(private http: HttpClient) {
     this.loadFromLocalStorage();
   }
 
   private saveToLocalStorage(): void {
-    localStorage.setItem('countriesStore', JSON.stringify(this.countriesStore));
+    localStorage.setItem("countriesStore", JSON.stringify(this.countriesStore));
   }
 
   private loadFromLocalStorage(): void {
-    const countriesStore = localStorage.getItem('countriesStore');
+    const countriesStore = localStorage.getItem("countriesStore");
 
     if (countriesStore) {
       this.countriesStore = JSON.parse(countriesStore);
@@ -44,7 +45,7 @@ export class CountriesService {
     return this.sendRequest(url).pipe(
       tap((countries) => {
         this.countriesStore.countries = countries;
-        this.countriesStore.query = '';
+        this.countriesStore.query = "";
       }),
       tap(() => this.saveToLocalStorage())
     );
@@ -55,18 +56,16 @@ export class CountriesService {
     return this.sendRequest(url).pipe(
       tap((countries) => {
         this.countriesStore.countries = countries;
-        this.countriesStore.query = query;
+        this.countriesStore.query = query
       }),
       tap(() => this.saveToLocalStorage())
-    );
+    );;
   }
 
   searchCountryByCode(code: string): Observable<Country | null> {
     const url = `${this.apiUrl}/alpha/${code}`;
-    return this.http.get<Country[]>(url).pipe(
-      map((countries) => (countries.length > 0 ? countries[0] : null)),
-      catchError(() => of(null))
-    );
+    return this.http.get<Country[]>(url).pipe(map(countries => countries.length > 0 ? countries[0] : null),
+      catchError(() => of(null)));
   }
 
   changeRegionFilter(region: Region) {

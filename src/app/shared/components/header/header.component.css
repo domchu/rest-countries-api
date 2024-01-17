@@ -1,35 +1,30 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-nav {
+header {
   width: 100%;
-  padding: 1.5rem 4rem;
+  padding: 0.5rem 4rem;
   background-color: var(--color-elements);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
 }
-nav h1 {
-  font-size: 1.7rem;
+
+h1 {
+  font-size: 1.5rem;
 }
-nav button {
+
+button {
   background-color: transparent;
   border: none;
   color: var(--color-text);
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: var(--items-font-size);
   font-weight: var(--medium-font-weight);
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-nav button img {
+
+img {
   height: 30px;
 }
 

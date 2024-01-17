@@ -5,14 +5,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'countries-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() country!: Country;
+  @Input() country! : Country;
 
-  constructor(private router: Router) {}
+  constructor (private router: Router) {}
 
   navigateCard() {
-    return this.router.navigate(['countries', this.country.cca3]);
+    return this.router.navigate(["countries", this.country.cca3])
   }
 }
