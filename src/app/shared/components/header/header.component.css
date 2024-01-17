@@ -23,6 +23,7 @@ header button {
 }
 header button img {
   height: 30px;
+  padding: 0px 5px;
 }
 
 @media (max-width: 835px) {
