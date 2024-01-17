@@ -1,33 +1,30 @@
 header {
   width: 100%;
-  padding: .5rem 4rem;
+  padding: .95rem 5rem;
   background-color: var(--color-elements);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 0px 5px rgb(0 0 0 / 20%);
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+    font-family: "Roboto", sans-serif;
+    font-size: var(--items-font-size);
+    font-weight: var(--medium-font-weight);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    img {
+      height: 30px;
+    }
+  }
 }
-
-h1 {
-  font-size: 1.5rem;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  color: var(--color-text);
-  font-family: "Nunito Sans", sans-serif;
-  font-size: var(--items-font-size);
-  font-weight: var(--medium-font-weight);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-img {
-  height: 30px;
-}
-
+// RESPONSIVENESS
 @media (max-width: 835px) {
   header {
     padding: .5rem 2rem;
@@ -43,3 +40,9 @@ img {
     font-size: 1.1rem;
   }
 }
+
+
+
+
+
+

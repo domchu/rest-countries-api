@@ -1,30 +1,27 @@
 header {
   width: 100%;
-  padding: 0.5rem 4rem;
+  padding: 0.95rem 5rem;
   background-color: var(--color-elements);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
 }
-
-h1 {
-  font-size: 1.5rem;
+header h1 {
+  font-size: 1.8rem;
 }
-
-button {
+header button {
   background-color: transparent;
   border: none;
   color: var(--color-text);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: var(--items-font-size);
   font-weight: var(--medium-font-weight);
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-
-img {
+header button img {
   height: 30px;
 }
 
